@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ash Portfolio</title>
+  <title>Fun Facts</title>
+  <style>
+    body {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      font-family: Arial;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      background: #38bdf8;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, I'm Ash 👋</h1>
-  <p>This is my first website 🚀</p>
+
+<h1>Random Fun Facts 🤖</h1>
+<p id="fact">Click the button to see a fact!</p>
+
+<button onclick="showFact()">Show Fact</button>
+
+<script>
+function showFact() {
+  const facts = [
+    "Honey never spoils 🍯",
+    "Bananas are berries 🍌",
+    "Sharks existed before trees 🦈",
+    "Octopus has 3 hearts ❤️",
+    "The moon has moonquakes 🌙"
+  ];
+
+  let random = Math.floor(Math.random() * facts.length);
+  document.getElementById("fact").innerText = facts[random];
+}
+</script>
+
 </body>
 </html>
